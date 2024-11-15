@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap.">
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Added logging system and integrated across modules. Created configuration file for centralized settings. Implemented exception handling in main.py.">
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualizations/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualizations/plotter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731671707100</updated>
       <workItem from="1731671708216" duration="5102000" />
-      <workItem from="1731701011847" duration="4899000" />
+      <workItem from="1731701011847" duration="5205000" />
     </task>
     <task id="LOCAL-00001" summary="Set up PyCharm project with virtual environment, organized directories, initialized Git, and installed dependencies. Added basic configuration and tested setup.">
       <option name="closed" value="true" />
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731704625792</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added logging system and integrated across modules. Created configuration file for centralized settings. Implemented exception handling in main.py.">
+      <option name="closed" value="true" />
+      <created>1731705983617</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731705983617</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +215,8 @@
     <MESSAGE value="Implemented functionality to extract top keywords from job descriptions and identify missing keywords in the CV. Added visualization for missing keywords. Verified in main.py." />
     <MESSAGE value="Added visualizations for CV-job alignment. Implemented a similarity heatmap and an interactive keyword comparison plot. Integrated and tested in main.py." />
     <MESSAGE value="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap." />
+    <MESSAGE value="Added logging system and integrated across modules. Created configuration file for centralized settings. Implemented exception handling in main.py." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logging system and integrated across modules. Created configuration file for centralized settings. Implemented exception handling in main.py." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731705894024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

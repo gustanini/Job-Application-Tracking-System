@@ -12,4 +12,5 @@ CONFIG = {
     "TOP_N_KEYWORDS": 10,
     "TOP_N_JOBS": 5,
     "LOG_LEVEL": "INFO",
+    "CUSTOM_STOP_WORDS": {"experience", "required", "preferred", "responsibilities", "strong", "ability", "work", "skills", "team", "analytics", "requirements", "systems", "knowledge", "job", "years", "information", "quality", "company", "opportunity", "technical"},
 }

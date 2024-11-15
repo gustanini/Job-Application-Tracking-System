@@ -114,3 +114,17 @@ def plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, 
         labels={"value": "TF-IDF Score", "Keyword": "Keyword"}
     )
     fig.show()
+
+def plot_evaluation_metrics(metrics):
+    """
+    Plot evaluation metrics for similarity and recommendations.
+    Args:
+        metrics (dict): Metrics to visualize.
+    """
+    labels, values = zip(*metrics.items())
+    plt.figure(figsize=(8, 6))
+    plt.bar(labels, values)
+    plt.ylabel("Metric Value")
+    plt.title("Evaluation Metrics")
+    plt.tight_layout()
+    plt.show()

@@ -6,7 +6,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+
+import config
 from logs.log_config import log_event
+from config import CONFIG
 
 # import nltk
 
@@ -106,8 +109,8 @@ def remove_stop_words(text_series):
         pd.Series: Text series with stop words removed.
     """
     # create custom list based off of results
-    # user should iterate a couple of times to ensure only relevant words are present.
-    CUSTOM_STOP_WORDS = {"experience", "required", "preferred", "responsibilities", "strong", "ability", "work", "skills", "team", "analytics", "requirements", "systems", "knowledge", "job", "years", "information", "quality", "company", "opportunity", "technical"}
+    # user should iterate a couple of times to ensure only relevant words are present, make edits on config.py if necessary.
+    CUSTOM_STOP_WORDS = config.CONFIG.get("CUSTOM_STOP_WORDS")
     # append custom list
     ALL_STOP_WORDS = ENGLISH_STOP_WORDS.union(CUSTOM_STOP_WORDS)
 

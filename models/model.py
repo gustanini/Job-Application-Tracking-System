@@ -64,3 +64,44 @@ def find_missing_keywords(cv_vector, feature_names, job_features):
         if cv_keywords[i] == 0 and job_keywords[i] > 0
     ]
     return sorted(missing_keywords, key=lambda x: x[1], reverse=True)
+
+def evaluate_similarity(ranked_jobs, threshold=0.5):
+    """
+    Evaluate the similarity scores to assess accuracy.
+    Args:
+        ranked_jobs (pd.DataFrame): Ranked job data.
+        threshold (float): Minimum similarity score for a job to be considered relevant.
+    Returns:
+        dict: Evaluation metrics (precision, recall, etc.).
+    """
+    relevant_jobs = ranked_jobs[ranked_jobs['Similarity Score'] >= threshold]
+    total_relevant = len(relevant_jobs)
+    total_jobs = len(ranked_jobs)
+
+    # Example metrics
+    precision = total_relevant / total_jobs if total_jobs > 0 else 0
+    metrics = {
+        "Total Jobs": total_jobs,
+        "Relevant Jobs": total_relevant,
+        "Precision": precision,
+    }
+    return metrics
+
+def evaluate_keyword_recommendations(missing_keywords, top_n=10):
+    """
+    Evaluate the quality of missing keyword recommendations.
+    Args:
+        missing_keywords (list): Missing keywords with their importance scores.
+        top_n (int): Number of recommendations to consider.
+    Returns:
+        dict: Evaluation metrics for keyword recommendations.
+    """
+    top_recommendations = missing_keywords[:top_n]
+    avg_importance_score = sum(score for _, score in top_recommendations) / len(
+        top_recommendations) if top_recommendations else 0
+
+    metrics = {
+        "Top Recommendations": len(top_recommendations),
+        "Average Importance Score": avg_importance_score,
+    }
+    return metrics

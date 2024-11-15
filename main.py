@@ -1,6 +1,6 @@
 from data.data_loader import load_csv, load_cv, preprocess_csv, preprocess_cv, featurize_text
-from models.model import calculate_similarity, rank_jobs_by_similarity, extract_top_keywords, find_missing_keywords
-from visualizations.plotter import plot_keyword_frequency, plot_top_matches, plot_missing_keywords, plot_similarity_heatmap, plot_interactive_keyword_comparison
+from models.model import calculate_similarity, rank_jobs_by_similarity, extract_top_keywords, find_missing_keywords, evaluate_similarity, evaluate_keyword_recommendations
+from visualizations.plotter import plot_keyword_frequency, plot_top_matches, plot_missing_keywords, plot_similarity_heatmap, plot_interactive_keyword_comparison, plot_evaluation_metrics
 from logs.log_config import log_event
 from visualizations import plotter
 from dashboard import dashboard
@@ -62,6 +62,19 @@ try:
     # Visualize keyword comparison
     plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, top_n=10)
 
+    # Evaluate similarity scores
+    similarity_metrics = evaluate_similarity(ranked_jobs, threshold=0.5)
+    print("Similarity Metrics:", similarity_metrics)
+
+    # Evaluate keyword recommendations
+    recommendation_metrics = evaluate_keyword_recommendations(missing_keywords, top_n=10)
+    print("Keyword Recommendation Metrics:", recommendation_metrics)
+
+    # Combine metrics and visualize
+    all_metrics = {**similarity_metrics, **recommendation_metrics}
+    plot_evaluation_metrics(all_metrics)
+
 except Exception as e:
+    # log errors
     log_event(f"Unexpected error: {e}", level="critical")
     print("An unexpected error occurred. Check the logs for details.")
