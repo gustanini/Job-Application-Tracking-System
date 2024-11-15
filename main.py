@@ -26,8 +26,7 @@ cv_data = preprocess_cv(cv_data)
 #print(cv_data)
 
 # Featurize text
-job_descriptions = jobs_data['Job Description']
-job_features, cv_vector, feature_names = featurize_text(job_descriptions, cv_data)
+job_features, cv_vector, feature_names = featurize_text(jobs_data['Job Description'], cv_data)
 
 # Visualize keyword frequency
 plot_keyword_frequency(feature_names, job_features)
