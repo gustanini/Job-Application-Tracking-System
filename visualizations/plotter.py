@@ -18,3 +18,17 @@ def plot_keyword_frequency(feature_names, job_features):
     plt.xlabel("Frequency")
     plt.title("Top 20 Keywords in Job Descriptions")
     plt.show()
+
+def plot_top_matches(ranked_jobs, top_n=5):
+    """
+    Plot the top N job matches based on similarity score.
+    Args:
+        ranked_jobs (pd.DataFrame): Ranked job data.
+        top_n (int): Number of top matches to display.
+    """
+    top_jobs = ranked_jobs.head(top_n)
+    plt.barh(top_jobs['Job Title'], top_jobs['Similarity Score'])
+    plt.xlabel("Similarity Score")
+    plt.title(f"Top {top_n} Job Matches")
+    plt.gca().invert_yaxis()  # Reverse order for better readability
+    plt.show()

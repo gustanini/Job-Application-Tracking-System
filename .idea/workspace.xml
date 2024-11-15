@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Enhanced text processing pipeline with stop-word removal, custom stop words, and lemmatization. Updated preprocessing for CSV and CV data. Verified improvements with updated keyword frequency visualization.&#10;&#10;Resolved NLTK resource loading issue by manually downloading punkt and wordnet. Updated preprocessing pipeline to ensure stability.">
+    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Add comments for data_loader.py wordlists">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualizations/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualizations/plotter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731671707100</updated>
       <workItem from="1731671708216" duration="5102000" />
-      <workItem from="1731701011847" duration="1073000" />
+      <workItem from="1731701011847" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="Set up PyCharm project with virtual environment, organized directories, initialized Git, and installed dependencies. Added basic configuration and tested setup.">
       <option name="closed" value="true" />
@@ -127,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731676725452</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add comments for data_loader.py wordlists">
+      <option name="closed" value="true" />
+      <created>1731702202199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731702202199</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,9 +149,10 @@
     <MESSAGE value="Integrated CSV and CV into the Data Handling Module. Implemented loading and preprocessing functions for job data and CV. Tested functionality in main.py." />
     <MESSAGE value="Added text featurization using TF-IDF and keyword frequency visualization. Integrated functions to analyze job descriptions and CV. Tested in main.py." />
     <MESSAGE value="Enhanced text processing pipeline with stop-word removal, custom stop words, and lemmatization. Updated preprocessing for CSV and CV data. Verified improvements with updated keyword frequency visualization.&#10;&#10;Resolved NLTK resource loading issue by manually downloading punkt and wordnet. Updated preprocessing pipeline to ensure stability." />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhanced text processing pipeline with stop-word removal, custom stop words, and lemmatization. Updated preprocessing for CSV and CV data. Verified improvements with updated keyword frequency visualization.&#10;&#10;Resolved NLTK resource loading issue by manually downloading punkt and wordnet. Updated preprocessing pipeline to ensure stability." />
+    <MESSAGE value="Add comments for data_loader.py wordlists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments for data_loader.py wordlists" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731701949694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731702260209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
