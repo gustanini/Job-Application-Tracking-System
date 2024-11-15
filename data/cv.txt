@@ -1,0 +1,59 @@
+NAME SURNAME
+
+PERSONAL STATEMENT
+
+Innovative and process-oriented Senior Data Analyst with 10+ years of experience in collecting, interpreting, and analysing statistical figures for strategic business decisions and solutions. Good communicator focused on building client relationships to develop the right strategies to query and extract insights. Possess an M.Sc. in Business Analytics. Proficient in using data visualisation tools to identify key business trends and increase sales and productivity.
+
+WORK EXPERIENCE
+
+Coven Data Consulting LTD., Liverpool
+Senior Data Analyst, 20XX – Present
+
+    Used Google Analytics and SPSS to implement new scripts that increased performance by 35%
+    Brought £25K revenue to the company by developing improved insights for better management decisions
+    Supervise and train 15 Junior Data Analysts in data management and qualitative and quantitative analysis
+    Implement and improve databases, data analytics, and data collection systems to help meet company sales goals for 3 consecutive years
+    Review technical reports and performance indicators to filter and clean data, locating issues related to data codes
+
+Star Labs, Birmingham
+Data Analyst, 20XX – 20XX
+
+    Used SPSS and MATLAB to collect and analyse a variety of statistical models and produce comprehensive reports
+    Generated PL/SQL scripts for extensive back-end testing
+    Developed key performance indicators and data architecture to monitor company sales and reduce costs by 28%
+    Conducted research and analysed large data sets on 2 different products, and increased sales by 21%
+    Trained 5 interns to use data visualisation tools to optimise statistical efficiency and quality
+
+Tech Hub, Liverpool
+Research Analyst, 20XX – 20XX
+
+    Organised and analysed data using Excel functions
+    Received accolades from the manager for identifying trends and offering recommendations for improvement
+    Collaborated with superiors to collect, interpret, and compile data in an organised manner
+    Presented 3 detailed reports each week to senior analysts, enumerating developments with the company’s projects
+
+EDUCATION
+
+University of Oxford, 20XX-20XX
+MSc in Business Analytics, first-class honours
+
+University of Oxford, 20XX-20XX
+BSc (Hons) Statistical Science, upper second-class honours (2:1)
+
+Relevant Modules: Business Intelligence Systems, Concepts & Methods; Research Methods; Data Mining Techniques and Applications; Analytics Programming; Data Warehouse Design and OLAP
+
+Dissertation Topic: Big data analytics and its impact on marketing strategy
+
+Bay Leadership Academy, Morecambe, 20XX-20XX
+
+A-levels: Maths (A), Physics (A), Computer Science (A)
+GCSEs: 10 A-C including Maths, English, Computer Science, Business Studies, and Physics
+
+KEY SKILLS
+
+Critical Thinking – Data Visualisation – Machine Learning – Microsoft Excel – Structured Query Language (SQL) – R – Python – Communication skills
+
+HOBBIES & INTERESTS
+
+Coding – Dancing – Reading – Public Speaking
+
