@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+from logs.log_config import log_event
+
 # import nltk
 
 # nltk.download('punkt')
@@ -22,10 +24,10 @@ def load_csv(file_path):
     """
     try:
         data = pd.read_csv(file_path)
-        print("CSV loaded successfully!")
+        log_event(f"CSV loaded successfully from {file_path}")
         return data
     except Exception as e:
-        print(f"Error loading CSV: {e}")
+        log_event(f"Error loading CSV: {e}", level="error")
         return None
 
 def load_cv(file_path):

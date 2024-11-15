@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Implemented functionality to extract top keywords from job descriptions and identify missing keywords in the CV. Added visualization for missing keywords. Verified in main.py.">
+    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap.">
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualizations/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualizations/plotter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731671707100</updated>
       <workItem from="1731671708216" duration="5102000" />
-      <workItem from="1731701011847" duration="3333000" />
+      <workItem from="1731701011847" duration="4899000" />
     </task>
     <task id="LOCAL-00001" summary="Set up PyCharm project with virtual environment, organized directories, initialized Git, and installed dependencies. Added basic configuration and tested setup.">
       <option name="closed" value="true" />
@@ -160,7 +162,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731704043570</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added visualizations for CV-job alignment. Implemented a similarity heatmap and an interactive keyword comparison plot. Integrated and tested in main.py.">
+      <option name="closed" value="true" />
+      <created>1731704370984</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731704370984</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap.">
+      <option name="closed" value="true" />
+      <created>1731704625792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731704625792</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,9 +205,11 @@
     <MESSAGE value="Implemented CV-job matching using cosine similarity. Added functionality to rank and visualize job descriptions based on similarity scores. Tested ranking and visualization in main.py." />
     <MESSAGE value="Debugged issue with missing matches in top job rankings. Enhanced preprocessing, adjusted TF-IDF parameters, and added fallback logic for fewer than 5 jobs. Updated visualization to reflect results dynamically." />
     <MESSAGE value="Implemented functionality to extract top keywords from job descriptions and identify missing keywords in the CV. Added visualization for missing keywords. Verified in main.py." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented functionality to extract top keywords from job descriptions and identify missing keywords in the CV. Added visualization for missing keywords. Verified in main.py." />
+    <MESSAGE value="Added visualizations for CV-job alignment. Implemented a similarity heatmap and an interactive keyword comparison plot. Integrated and tested in main.py." />
+    <MESSAGE value="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731704318566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731705894024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
