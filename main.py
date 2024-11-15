@@ -1,6 +1,6 @@
 from data.data_loader import load_csv, load_cv, preprocess_csv, preprocess_cv, featurize_text
 from models.model import calculate_similarity, rank_jobs_by_similarity, extract_top_keywords, find_missing_keywords
-from visualizations.plotter import plot_keyword_frequency, plot_top_matches, plot_missing_keywords
+from visualizations.plotter import plot_keyword_frequency, plot_top_matches, plot_missing_keywords, plot_similarity_heatmap, plot_interactive_keyword_comparison
 from visualizations import plotter
 from dashboard import dashboard
 from utils import helpers
@@ -50,3 +50,9 @@ print("Missing Keywords in CV:", missing_keywords[:10])  # Show top 10 missing k
 
 # Visualize missing keywords
 plot_missing_keywords(missing_keywords, top_n=10)
+
+# Visualize similarity heatmap
+plot_similarity_heatmap(ranked_jobs, top_n=5)
+
+# Visualize keyword comparison
+plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, top_n=10)

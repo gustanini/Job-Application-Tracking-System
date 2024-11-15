@@ -4,6 +4,9 @@ This module handles plots and charts.
 """
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
+import plotly.express as px
+import pandas as pd
 
 def plot_keyword_frequency(feature_names, job_features):
     """
@@ -51,3 +54,54 @@ def plot_missing_keywords(missing_keywords, top_n=10):
     plt.title(f"Top {top_n} Missing Keywords in CV")
     plt.gca().invert_yaxis()
     plt.show()
+
+def plot_similarity_heatmap(ranked_jobs, top_n=10):
+    """
+    Create a heatmap showing similarity scores between the CV and job descriptions.
+    Args:
+        ranked_jobs (pd.DataFrame): Ranked job data.
+        top_n (int): Number of top jobs to include in the heatmap.
+    """
+    top_jobs = ranked_jobs.head(top_n)
+    sns.heatmap(
+        top_jobs[['Similarity Score']].transpose(),
+        annot=True,
+        fmt=".2f",
+        xticklabels=top_jobs['Job Title'],
+        cmap="coolwarm"
+    )
+    plt.title(f"Similarity Scores for Top {top_n} Jobs")
+    plt.xlabel("Job Titles")
+    plt.ylabel("Similarity")
+    plt.show()
+
+def plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, top_n=10):
+    """
+    Create an interactive plot comparing CV and job keywords.
+    Args:
+        feature_names (list): Feature names from TF-IDF.
+        cv_vector (sparse matrix): TF-IDF vector for the CV.
+        job_features (sparse matrix): TF-IDF matrix for job descriptions.
+        top_n (int): Number of top keywords to display.
+    """
+    job_keywords = job_features.sum(axis=0).A1
+    cv_keywords = cv_vector.toarray().flatten()
+
+    # Combine into a DataFrame
+    keyword_scores = [
+        {"Keyword": feature_names[i], "Job Score": job_keywords[i], "CV Score": cv_keywords[i]}
+        for i in range(len(feature_names))
+    ]
+    sorted_keywords = sorted(keyword_scores, key=lambda x: x['Job Score'], reverse=True)[:top_n]
+    df = pd.DataFrame(sorted_keywords)
+
+    # Create an interactive bar chart
+    fig = px.bar(
+        df,
+        x="Keyword",
+        y=["Job Score", "CV Score"],
+        barmode="group",
+        title="Keyword Comparison: CV vs. Job Descriptions",
+        labels={"value": "TF-IDF Score", "Keyword": "Keyword"}
+    )
+    fig.show()
