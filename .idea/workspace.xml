@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Implemented evaluation metrics for similarity scores and keyword recommendations. Integrated evaluation and visualization into main.py.">
+    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity.">
+      <change afterPath="$PROJECT_DIR$/dashboard/streamlit_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health_check/health_check.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualizations/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualizations/plotter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731671707100</updated>
       <workItem from="1731671708216" duration="5102000" />
-      <workItem from="1731701011847" duration="5957000" />
+      <workItem from="1731701011847" duration="7701000" />
     </task>
     <task id="LOCAL-00001" summary="Set up PyCharm project with virtual environment, organized directories, initialized Git, and installed dependencies. Added basic configuration and tested setup.">
       <option name="closed" value="true" />
@@ -192,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731706518828</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity.">
+      <option name="closed" value="true" />
+      <created>1731707247141</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731707247141</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,9 +237,10 @@
     <MESSAGE value="Fixed cropping issues in all plots by increasing figure size and applying tight layout adjustments. Improved label visibility for keyword frequency, top job matches, missing keywords, and similarity scores heatmap." />
     <MESSAGE value="Added logging system and integrated across modules. Created configuration file for centralized settings. Implemented exception handling in main.py." />
     <MESSAGE value="Implemented evaluation metrics for similarity scores and keyword recommendations. Integrated evaluation and visualization into main.py." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented evaluation metrics for similarity scores and keyword recommendations. Integrated evaluation and visualization into main.py." />
+    <MESSAGE value="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731706950303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731707215445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

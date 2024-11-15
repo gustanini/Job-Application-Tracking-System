@@ -7,7 +7,9 @@ import numpy as np
 import seaborn as sns
 import plotly.express as px
 import pandas as pd
+from logs.log_config import log_execution_time
 
+@log_execution_time
 def plot_keyword_frequency(feature_names, job_features, top_n=20):
     """
     Plot the top 20 keywords based on frequency.
@@ -24,6 +26,7 @@ def plot_keyword_frequency(feature_names, job_features, top_n=20):
     plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
+@log_execution_time
 def plot_top_matches(ranked_jobs, top_n=5):
     """
     Plot the top N job matches based on similarity score.
@@ -45,6 +48,7 @@ def plot_top_matches(ranked_jobs, top_n=5):
     plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
+@log_execution_time
 def plot_missing_keywords(missing_keywords, top_n=10):
     """
     Plot the top N missing keywords from the CV.
@@ -61,6 +65,7 @@ def plot_missing_keywords(missing_keywords, top_n=10):
     plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
+@log_execution_time
 def plot_similarity_heatmap(ranked_jobs, top_n=10):
     """
     Create a heatmap showing similarity scores between the CV and job descriptions.
@@ -84,6 +89,7 @@ def plot_similarity_heatmap(ranked_jobs, top_n=10):
     plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
+@log_execution_time
 def plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, top_n=10):
     """
     Create an interactive plot comparing CV and job keywords.
@@ -115,6 +121,7 @@ def plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, 
     )
     fig.show()
 
+@log_execution_time
 def plot_evaluation_metrics(metrics):
     """
     Plot evaluation metrics for similarity and recommendations.
@@ -129,4 +136,3 @@ def plot_evaluation_metrics(metrics):
     plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels (no overlapping)
     plt.tight_layout()
     plt.show()
-

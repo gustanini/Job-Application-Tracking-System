@@ -4,7 +4,9 @@ This module handles keyword analysis and job-CV matching.
 """
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from logs.log_config import log_execution_time
 
+@log_execution_time
 def calculate_similarity(job_features, cv_vector):
     """
     Calculate cosine similarity between job descriptions and the CV.
@@ -17,6 +19,7 @@ def calculate_similarity(job_features, cv_vector):
     similarities = cosine_similarity(job_features, cv_vector)
     return similarities.flatten()
 
+@log_execution_time
 def rank_jobs_by_similarity(jobs_data, similarity_scores):
     """
     Rank job descriptions based on similarity to the CV.
@@ -30,6 +33,7 @@ def rank_jobs_by_similarity(jobs_data, similarity_scores):
     ranked_jobs = jobs_data.sort_values(by='Similarity Score', ascending=False)
     return ranked_jobs
 
+@log_execution_time
 def extract_top_keywords(feature_names, job_features, top_n=10):
     """
     Extract top keywords from job descriptions based on TF-IDF scores.
@@ -45,6 +49,7 @@ def extract_top_keywords(feature_names, job_features, top_n=10):
     top_keywords = [(feature_names[i], keyword_sums[i]) for i in reversed(top_indices)]
     return top_keywords
 
+@log_execution_time
 def find_missing_keywords(cv_vector, feature_names, job_features):
     """
     Identify keywords present in job descriptions but missing in the CV.
@@ -65,6 +70,7 @@ def find_missing_keywords(cv_vector, feature_names, job_features):
     ]
     return sorted(missing_keywords, key=lambda x: x[1], reverse=True)
 
+@log_execution_time
 def evaluate_similarity(ranked_jobs, threshold=0.5):
     """
     Evaluate the similarity scores to assess accuracy.
@@ -87,6 +93,7 @@ def evaluate_similarity(ranked_jobs, threshold=0.5):
     }
     return metrics
 
+@log_execution_time
 def evaluate_keyword_recommendations(missing_keywords, top_n=10):
     """
     Evaluate the quality of missing keyword recommendations.

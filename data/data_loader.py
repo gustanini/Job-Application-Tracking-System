@@ -6,9 +6,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-
 import config
-from logs.log_config import log_event
+from logs.log_config import log_event, log_execution_time
 from config import CONFIG
 
 # import nltk
@@ -17,6 +16,7 @@ from config import CONFIG
 # nltk.download('punkt_tab')
 # nltk.download('wordnet')
 
+@log_execution_time
 def load_csv(file_path):
     """
     Load the CSV file containing job listings.
@@ -33,6 +33,7 @@ def load_csv(file_path):
         log_event(f"Error loading CSV: {e}", level="error")
         return None
 
+@log_execution_time
 def load_cv(file_path):
     """
     Load the CV text file.
@@ -50,6 +51,7 @@ def load_cv(file_path):
         print(f"Error loading CV: {e}")
         return None
 
+@log_execution_time
 def preprocess_csv(data):
     """
     Preprocess job listings data.
@@ -69,6 +71,7 @@ def preprocess_csv(data):
     print("CSV preprocessed successfully!")
     return data
 
+@log_execution_time
 def preprocess_cv(cv_content):
     """
     Preprocess the CV text.
@@ -84,6 +87,7 @@ def preprocess_cv(cv_content):
     print("CV preprocessed successfully!")
     return cv_content
 
+@log_execution_time
 def featurize_text(job_descriptions, cv_content):
     """
     Convert job descriptions and CV into numerical features using TF-IDF.
@@ -100,6 +104,7 @@ def featurize_text(job_descriptions, cv_content):
     print("Text featurized successfully!")
     return job_features, cv_vector, vectorizer.get_feature_names_out()
 
+@log_execution_time
 def remove_stop_words(text_series):
     """
     Remove stop words from a series of text data.
@@ -120,6 +125,7 @@ def remove_stop_words(text_series):
 
     return text_series.apply(clean_text)
 
+@log_execution_time
 def lemmatize_text(text_series):
     """
     Lemmatize words in a series of text data.
