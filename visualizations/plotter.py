@@ -27,7 +27,12 @@ def plot_top_matches(ranked_jobs, top_n=5):
         top_n (int): Number of top matches to display.
     """
     top_jobs = ranked_jobs.head(top_n)
-    plt.barh(top_jobs['Job Title'], top_jobs['Similarity Score'])
+    # Create unique labels for jobs
+    labels = [
+        f"{title} ({score:.2f})"
+        for title, score in zip(top_jobs['Job Title'], top_jobs['Similarity Score'])
+    ]
+    plt.barh(labels, top_jobs['Similarity Score'])
     plt.xlabel("Similarity Score")
     plt.title(f"Top {top_n} Job Matches")
     plt.gca().invert_yaxis()  # Reverse order for better readability
