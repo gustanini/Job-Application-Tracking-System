@@ -122,9 +122,11 @@ def plot_evaluation_metrics(metrics):
         metrics (dict): Metrics to visualize.
     """
     labels, values = zip(*metrics.items())
-    plt.figure(figsize=(8, 6))
-    plt.bar(labels, values)
-    plt.ylabel("Metric Value")
-    plt.title("Evaluation Metrics")
+    plt.figure(figsize=(10, 6))
+    plt.bar(labels, values, color="skyblue")
+    plt.ylabel("Metric Value (Normalized for Total Jobs)")
+    plt.title("Evaluation Metrics (Normalized)")
+    plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels (no overlapping)
     plt.tight_layout()
     plt.show()
+

@@ -72,7 +72,14 @@ try:
 
     # Combine metrics and visualize
     all_metrics = {**similarity_metrics, **recommendation_metrics}
-    plot_evaluation_metrics(all_metrics)
+    # Define the maximum values for scaling
+    max_jobs = 2000  # Replace with actual maximum or dataset size
+    # Normalize metrics
+    normalized_metrics = {
+        key: (value / max_jobs) * 100 if key == "Total Jobs" else value
+        for key, value in all_metrics.items()
+    }
+    plot_evaluation_metrics(normalized_metrics)
 
 except Exception as e:
     # log errors
