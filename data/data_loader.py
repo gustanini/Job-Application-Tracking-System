@@ -103,7 +103,10 @@ def remove_stop_words(text_series):
     Returns:
         pd.Series: Text series with stop words removed.
     """
-    CUSTOM_STOP_WORDS = {"experience", "required", "preferred", "responsibilities", "strong", "ability", "work", "skills", "team", "analytics", "requirements", "systems", "knowledge", "job", "years", "information"}
+    # create custom list based off of results
+    # user should iterate a couple of times to ensure only relevant words are present.
+    CUSTOM_STOP_WORDS = {"experience", "required", "preferred", "responsibilities", "strong", "ability", "work", "skills", "team", "analytics", "requirements", "systems", "knowledge", "job", "years", "information", "quality", "company", "opportunity", "technical"}
+    # append custom list
     ALL_STOP_WORDS = ENGLISH_STOP_WORDS.union(CUSTOM_STOP_WORDS)
 
     def clean_text(text):
