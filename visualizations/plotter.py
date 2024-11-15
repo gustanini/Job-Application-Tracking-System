@@ -8,7 +8,7 @@ import seaborn as sns
 import plotly.express as px
 import pandas as pd
 
-def plot_keyword_frequency(feature_names, job_features):
+def plot_keyword_frequency(feature_names, job_features, top_n=20):
     """
     Plot the top 20 keywords based on frequency.
     Args:
@@ -16,10 +16,12 @@ def plot_keyword_frequency(feature_names, job_features):
         job_features (sparse matrix): TF-IDF matrix for job descriptions.
     """
     keyword_sums = np.array(job_features.sum(axis=0)).flatten()
-    top_keywords = np.argsort(keyword_sums)[-20:]
+    top_keywords = np.argsort(keyword_sums)[-top_n:]
+    plt.figure(figsize=(10, 6))  # Increase figure size
     plt.barh([feature_names[i] for i in top_keywords], keyword_sums[top_keywords])
     plt.xlabel("Frequency")
     plt.title("Top 20 Keywords in Job Descriptions")
+    plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
 def plot_top_matches(ranked_jobs, top_n=5):
@@ -35,10 +37,12 @@ def plot_top_matches(ranked_jobs, top_n=5):
         f"{title} ({score:.2f})"
         for title, score in zip(top_jobs['Job Title'], top_jobs['Similarity Score'])
     ]
+    plt.figure(figsize=(10, 6))  # Increase figure size
     plt.barh(labels, top_jobs['Similarity Score'])
     plt.xlabel("Similarity Score")
     plt.title(f"Top {top_n} Job Matches")
     plt.gca().invert_yaxis()  # Reverse order for better readability
+    plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
 def plot_missing_keywords(missing_keywords, top_n=10):
@@ -49,10 +53,12 @@ def plot_missing_keywords(missing_keywords, top_n=10):
         top_n (int): Number of top missing keywords to display.
     """
     keywords, scores = zip(*missing_keywords[:top_n])
+    plt.figure(figsize=(10, 6))  # Increase figure size
     plt.barh(keywords, scores)
     plt.xlabel("Importance Score")
     plt.title(f"Top {top_n} Missing Keywords in CV")
     plt.gca().invert_yaxis()
+    plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
 def plot_similarity_heatmap(ranked_jobs, top_n=10):
@@ -63,6 +69,7 @@ def plot_similarity_heatmap(ranked_jobs, top_n=10):
         top_n (int): Number of top jobs to include in the heatmap.
     """
     top_jobs = ranked_jobs.head(top_n)
+    plt.figure(figsize=(12, 6))  # Increase figure size
     sns.heatmap(
         top_jobs[['Similarity Score']].transpose(),
         annot=True,
@@ -73,6 +80,8 @@ def plot_similarity_heatmap(ranked_jobs, top_n=10):
     plt.title(f"Similarity Scores for Top {top_n} Jobs")
     plt.xlabel("Job Titles")
     plt.ylabel("Similarity")
+    plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels
+    plt.tight_layout()  # Adjust layout to prevent cropping
     plt.show()
 
 def plot_interactive_keyword_comparison(feature_names, cv_vector, job_features, top_n=10):
