@@ -37,3 +37,17 @@ def plot_top_matches(ranked_jobs, top_n=5):
     plt.title(f"Top {top_n} Job Matches")
     plt.gca().invert_yaxis()  # Reverse order for better readability
     plt.show()
+
+def plot_missing_keywords(missing_keywords, top_n=10):
+    """
+    Plot the top N missing keywords from the CV.
+    Args:
+        missing_keywords (list): Missing keywords with their scores.
+        top_n (int): Number of top missing keywords to display.
+    """
+    keywords, scores = zip(*missing_keywords[:top_n])
+    plt.barh(keywords, scores)
+    plt.xlabel("Importance Score")
+    plt.title(f"Top {top_n} Missing Keywords in CV")
+    plt.gca().invert_yaxis()
+    plt.show()
