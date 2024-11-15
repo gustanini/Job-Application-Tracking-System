@@ -3,6 +3,7 @@
 This module handles loading and preprocessing of datasets.
 """
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 def load_csv(file_path):
     """
@@ -63,3 +64,19 @@ def preprocess_cv(cv_content):
     cv_content = cv_content.strip()
     print("CV preprocessed successfully!")
     return cv_content
+
+def featurize_text(job_descriptions, cv_content):
+    """
+    Convert job descriptions and CV into numerical features using TF-IDF.
+    Args:
+        job_descriptions (pd.Series): List of job descriptions.
+        cv_content (str): The user's CV content.
+    Returns:
+        tuple: TF-IDF matrix for job descriptions, and CV vector.
+    """
+    vectorizer = TfidfVectorizer(stop_words='english', max_features=500) # converts text into numerical values based on term frequency and inverse document frequency
+    job_features = vectorizer.fit_transform(job_descriptions)
+    cv_vector = vectorizer.transform([cv_content])
+
+    print("Text featurized successfully!")
+    return job_features, cv_vector, vectorizer.get_feature_names_out()
