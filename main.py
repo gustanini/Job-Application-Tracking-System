@@ -15,24 +15,24 @@ from visualizations import plotter
 from dashboard import dashboard
 from utils import helpers
 from config import CONFIG
-from health_check import health_check
+from health_check.health_check import health_check
 import traceback
 
 def main():
-    # Perform health check
-    log_event("Starting health check...")
-    checks = health_check()
-    log_event(f"Health Check Results: {checks}")
-    print("Health Check Results:", checks)
-
-    # Exit if critical issues are found
-    if not all(checks.values()):
-        print("Critical issues detected during health check. Exiting.")
-        log_event("Critical issues detected. Exiting application.", level="error")
-        return
-
-    # Log successful health check
-    log_event("Health check passed. Proceeding with application.")
+    # # Perform health check
+    # log_event("Starting health check...")
+    # checks = health_check()
+    # log_event(f"Health Check Results: {checks}")
+    # print("Health Check Results:", checks)
+    #
+    # # Exit if critical issues are found
+    # if not all(checks.values()):
+    #     print("Critical issues detected during health check. Exiting.")
+    #     log_event("Critical issues detected. Exiting application.", level="error")
+    #     return
+    #
+    # # Log successful health check
+    # log_event("Health check passed. Proceeding with application.")
 
     try:
         # config variables

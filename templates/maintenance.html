@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance</title>
+</head>
+<body>
+    <h1>System Maintenance</h1>
+    <h2>Health Check Results</h2>
+    <ul>
+        {% for check, status in checks.items() %}
+            <li>{{ check }}: {{ "✅" if status else "❌" }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

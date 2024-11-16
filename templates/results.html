@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Job Application Results</h1>
+    <h2>Top Jobs</h2>
+    <ul>
+        {% for job in data["Top Jobs"] %}
+            <li>{{ job }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Metrics</h2>
+    <ul>
+        {% for metric, value in data["Metrics"].items() %}
+            <li>{{ metric }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

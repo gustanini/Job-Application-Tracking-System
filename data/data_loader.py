@@ -28,6 +28,7 @@ def load_csv(file_path):
     try:
         data = pd.read_csv(file_path)
         log_event(f"CSV loaded successfully from {file_path}")
+        print(f"CSV loaded successfully from {file_path}")
         return data
     except Exception as e:
         log_event(f"Error loading CSV: {e}", level="error")
@@ -45,7 +46,8 @@ def load_cv(file_path):
     try:
         with open(file_path, 'r') as file:
             cv_content = file.read()
-        print("CV loaded successfully!")
+        log_event(f"CV loaded successfully from {file_path}")
+        print(f"CV loaded successfully from {file_path}")
         return cv_content
     except Exception as e:
         print(f"Error loading CV: {e}")
@@ -68,6 +70,7 @@ def preprocess_csv(data):
     data['Job Description'] = remove_stop_words(data['Job Description'])
     data['Job Description'] = lemmatize_text(data['Job Description'])
 
+    log_event("CSV preprocessed successfully!")
     print("CSV preprocessed successfully!")
     return data
 
@@ -84,6 +87,7 @@ def preprocess_cv(cv_content):
     cv_content = remove_stop_words(pd.Series([cv_content])).iloc[0]
     cv_content = lemmatize_text(pd.Series([cv_content])).iloc[0]
 
+    log_event("CV preprocessed successfully!")
     print("CV preprocessed successfully!")
     return cv_content
 
@@ -101,6 +105,7 @@ def featurize_text(job_descriptions, cv_content):
     job_features = vectorizer.fit_transform(job_descriptions)
     cv_vector = vectorizer.transform([cv_content])
 
+    log_event("Text featurized successfully!")
     print("Text featurized successfully!")
     return job_features, cv_vector, vectorizer.get_feature_names_out()
 
