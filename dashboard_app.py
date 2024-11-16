@@ -1,6 +1,10 @@
 import os
 from flask import Flask, render_template, send_from_directory
+import matplotlib
 import matplotlib.pyplot as plt
+
+# Force Matplotlib to use the non-interactive Agg backend
+matplotlib.use("Agg")
 
 app = Flask(__name__)
 
