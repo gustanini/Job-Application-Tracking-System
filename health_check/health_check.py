@@ -33,6 +33,7 @@ def health_check():
     try:
         log_event("Health check: Logging is active")
         checks["Logging Active"] = True
+        print("Logging is active!") # message
     except Exception as e:
         log_event(f"Health check failed: Logging error - {e}", level="error")
 
