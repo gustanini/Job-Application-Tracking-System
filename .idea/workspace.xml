@@ -240,6 +240,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731715774975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731755961717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

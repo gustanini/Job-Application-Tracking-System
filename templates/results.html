@@ -9,15 +9,11 @@
     <h1>Job Application Results</h1>
     <h2>Top Jobs</h2>
     <ul>
-        {% for job in data["Top Jobs"] %}
+        {% for job in jobs %}
             <li>{{ job }}</li>
         {% endfor %}
     </ul>
-    <h2>Metrics</h2>
-    <ul>
-        {% for metric, value in data["Metrics"].items() %}
-            <li>{{ metric }}: {{ value }}</li>
-        {% endfor %}
-    </ul>
+    <h2>Top Job Matches</h2>
+    <img src="/static/{{ image }}" alt="Top Job Matches">
 </body>
 </html>
