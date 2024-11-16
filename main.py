@@ -1,38 +1,38 @@
-from data.data_loader import (load_csv, load_cv,
-                              preprocess_csv, preprocess_cv,
-                              featurize_text
-                              )
-from models.model import (calculate_similarity, rank_jobs_by_similarity,
-                          extract_top_keywords, find_missing_keywords,
-                          evaluate_similarity, evaluate_keyword_recommendations
-                          )
-from visualizations.plotter import (plot_keyword_frequency, plot_top_matches,
-                                    plot_missing_keywords, plot_similarity_heatmap,
-                                    plot_interactive_keyword_comparison, plot_evaluation_metrics
-                                    )
+from data.data_loader import (
+    load_csv, load_cv,
+    preprocess_csv, preprocess_cv,
+    featurize_text
+)
+from models.model import (
+    calculate_similarity, rank_jobs_by_similarity,
+    extract_top_keywords, find_missing_keywords,
+    evaluate_similarity, evaluate_keyword_recommendations
+)
+from visualizations.plotter import (
+    plot_keyword_frequency, plot_top_matches,
+    plot_missing_keywords, plot_similarity_heatmap,
+    plot_interactive_keyword_comparison, plot_evaluation_metrics
+)
 from logs.log_config import log_event
-from visualizations import plotter
-from dashboard import dashboard
-from utils import helpers
 from config import CONFIG
 from health_check.health_check import health_check
 import traceback
 
 def main():
-    # # Perform health check
-    # log_event("Starting health check...")
-    # checks = health_check()
-    # log_event(f"Health Check Results: {checks}")
-    # print("Health Check Results:", checks)
-    #
-    # # Exit if critical issues are found
-    # if not all(checks.values()):
-    #     print("Critical issues detected during health check. Exiting.")
-    #     log_event("Critical issues detected. Exiting application.", level="error")
-    #     return
-    #
-    # # Log successful health check
-    # log_event("Health check passed. Proceeding with application.")
+    # Perform health check
+    log_event("Starting health check...")
+    checks = health_check()
+    log_event(f"Health Check Results: {checks}")
+    print("Health Check Results:", checks)
+
+    # Exit if critical issues are found
+    if not all(checks.values()):
+        print("Critical issues detected during health check. Exiting.")
+        log_event("Critical issues detected. Exiting application.", level="error")
+        return
+
+    # Log successful health check
+    log_event("Health check passed. Proceeding with application.")
 
     try:
         # config variables

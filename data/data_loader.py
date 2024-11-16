@@ -8,13 +8,6 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import config
 from logs.log_config import log_event, log_execution_time
-from config import CONFIG
-
-# import nltk
-
-# nltk.download('punkt')
-# nltk.download('punkt_tab')
-# nltk.download('wordnet')
 
 @log_execution_time
 def load_csv(file_path):
