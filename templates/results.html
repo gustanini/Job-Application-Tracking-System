@@ -7,13 +7,11 @@
 </head>
 <body>
     <h1>Job Application Results</h1>
-    <h2>Top Jobs</h2>
-    <ul>
-        {% for job in jobs %}
-            <li>{{ job }}</li>
-        {% endfor %}
-    </ul>
-    <h2>Top Job Matches</h2>
-    <img src="/static/{{ image }}" alt="Top Job Matches">
+    {% for plot in plots %}
+        <div>
+            <h2>{{ plot.split('.')[0].replace('_', ' ').title() }}</h2>
+            <img src="/static/{{ plot }}" alt="{{ plot.split('.')[0] }}">
+        </div>
+    {% endfor %}
 </body>
 </html>
