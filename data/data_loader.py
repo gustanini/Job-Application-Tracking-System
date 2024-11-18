@@ -94,7 +94,7 @@ def featurize_text(job_descriptions, cv_content):
     Returns:
         tuple: TF-IDF matrix for job descriptions, and CV vector.
     """
-    vectorizer = TfidfVectorizer(stop_words='english', max_features=500) # converts text into numerical values based on term frequency and inverse document frequency
+    vectorizer = TfidfVectorizer(stop_words='english', max_features=500, ngram_range=(1,2)) # converts text into numerical values based on term frequency and inverse document frequency
     job_features = vectorizer.fit_transform(job_descriptions)
     cv_vector = vectorizer.transform([cv_content])
 

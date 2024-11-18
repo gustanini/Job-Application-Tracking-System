@@ -70,6 +70,7 @@ def find_missing_keywords(cv_vector, feature_names, job_features):
     ]
     return sorted(missing_keywords, key=lambda x: x[1], reverse=True)
 
+
 @log_execution_time
 def evaluate_similarity(ranked_jobs, threshold=0.5):
     """

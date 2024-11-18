@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Consolidated all outputs into the /results route. Generated static images for keyword frequency, missing keywords, similarity heatmap, top matches, and keyword comparison. Updated results.html to display all plots.">
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/streamlit_app.py" beforeDir="false" />
+    <list default="true" id="92a076cd-93a3-45b3-8081-b9147da5679e" name="Changes" comment="Cleaned up unused dependencies and updated requirements.txt to reflect the current environment.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +88,7 @@
       <workItem from="1731671708216" duration="5102000" />
       <workItem from="1731701011847" duration="7701000" />
       <workItem from="1731714903071" duration="898000" />
+      <workItem from="1731924230495" duration="3137000" />
     </task>
     <task id="LOCAL-00001" summary="Set up PyCharm project with virtual environment, organized directories, initialized Git, and installed dependencies. Added basic configuration and tested setup.">
       <option name="closed" value="true" />
@@ -211,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731767665290</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="cleanup and readability for various files">
+      <option name="closed" value="true" />
+      <created>1731768125007</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731768125007</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Cleaned up unused dependencies and updated requirements.txt to reflect the current environment.">
+      <option name="closed" value="true" />
+      <created>1731768210541</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731768210541</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,9 +259,22 @@
     <MESSAGE value="Implemented evaluation metrics for similarity scores and keyword recommendations. Integrated evaluation and visualization into main.py." />
     <MESSAGE value="Added normalization for evaluation metrics in main.py to address scale differences. Updated graph labels for clarity." />
     <MESSAGE value="Consolidated all outputs into the /results route. Generated static images for keyword frequency, missing keywords, similarity heatmap, top matches, and keyword comparison. Updated results.html to display all plots." />
-    <option name="LAST_COMMIT_MESSAGE" value="Consolidated all outputs into the /results route. Generated static images for keyword frequency, missing keywords, similarity heatmap, top matches, and keyword comparison. Updated results.html to display all plots." />
+    <MESSAGE value="cleanup and readability for various files" />
+    <MESSAGE value="Cleaned up unused dependencies and updated requirements.txt to reflect the current environment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up unused dependencies and updated requirements.txt to reflect the current environment." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/config.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731767161231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/JATS_python$JATS.coverage" NAME="JATS Coverage Results" MODIFIED="1731927298832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

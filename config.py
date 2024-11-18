@@ -15,8 +15,8 @@ CONFIG = {
     "CUSTOM_STOP_WORDS": {
         "experience", "required", "preferred", "responsibilities",
         "strong", "ability", "work", "skills",
-        "team", "analytics", "requirements", "systems",
-        "knowledge", "job", "years", "information",
+        "team", "analytics", "requirements",
+        "job", "years", "information",
         "quality", "company", "opportunity", "technical"
     },
 }
